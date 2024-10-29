@@ -6,3 +6,9 @@
 ```
 npm i -g typescript
 ```
+
+or
+
+```
+sudo npm i -g typescript
+```
