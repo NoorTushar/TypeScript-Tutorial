@@ -25,3 +25,7 @@ The above folder path will depend on us.
 ```
 
 -  then run `tsc` in the console and the folders will be created
+
+End Result:
+
+![alt text](image.png)
