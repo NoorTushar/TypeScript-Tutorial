@@ -1,31 +1,15 @@
 "use strict";
-{
-    //
-    const user = {
-        name: "Alice",
-        age: 30,
-        city: "New York",
-    };
-    // Destructure properties from the user object
-    const { name: userName, age, city } = user;
-    console.log(userName); // Output: Alice
-    console.log(age); // Output: 30
-    console.log(city); // Output: New York
-    const employee = {
-        id: 101,
-        name: "Bob",
-        position: "Developer",
-        address: {
-            city: "San Francisco",
-            state: "CA",
-            zip: "94103",
-        },
-    };
-    const { name, address: { city: cityName, state }, } = employee;
-    console.log(name, cityName, state); //Output: Bob San Francisco CA
-    //
-}
-const footballers = ["messi", "ronaldo", "zidane", "beckham"];
-const [, second, ...others] = footballers;
-console.log(second); // messi
-console.log(others);
+const person1 = {
+    name: "Tushar",
+    age: 18,
+    contact: "0169999999",
+};
+const person2 = {
+    name: "Mafia",
+    age: 18,
+    contact: "0169999999",
+    email: "mafia@mafia.com",
+};
+const isAdmin = true;
+const addTwo = (num1, num2) => num1 + num2;
+console.log(addTwo(4, 5));

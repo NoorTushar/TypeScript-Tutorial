@@ -17,3 +17,12 @@ const person2: Person = {
    contact: "0169999999",
    email: "mafia@mafia.com",
 };
+
+type IsAdmin = boolean;
+const isAdmin: IsAdmin = true;
+
+type AddFn = (num1: number, num2: number) => number;
+
+const addTwo: AddFn = (num1, num2) => num1 + num2;
+
+console.log(addTwo(4, 5)); // output: 9
