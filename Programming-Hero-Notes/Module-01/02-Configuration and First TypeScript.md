@@ -29,3 +29,19 @@ The above folder path will depend on us.
 End Result:
 
 ![alt text](image.png)
+
+## Watch the file automatically
+
+Install once:
+
+```
+npm i -g ts-node-dev
+```
+
+Then run the command:
+
+```
+ts-node-dev --respawn --transpile-only index.ts
+```
+
+aikhane index.ts er path ta specifically bolte hobe jodi onno kono folder e thake.
