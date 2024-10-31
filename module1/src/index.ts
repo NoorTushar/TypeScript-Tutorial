@@ -1,5 +1,19 @@
-const arr: number[] = [2, 4, 5];
+type Person = {
+   name: string;
+   age: number;
+   contact: string;
+   email?: string;
+};
 
-const newArr: number[] = arr.map(
-   (element: number): number => element * element
-);
+const person1: Person = {
+   name: "Tushar",
+   age: 18,
+   contact: "0169999999",
+};
+
+const person2: Person = {
+   name: "Mafia",
+   age: 18,
+   contact: "0169999999",
+   email: "mafia@mafia.com",
+};
