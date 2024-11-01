@@ -1,11 +1,13 @@
-// type use korle:
+const addCourseToStudent = <T>(param: T) => {
+   const course = "Next Level Web Development";
 
-type Add1 = (num1: number, num2: number) => number;
+   return {
+      ...param,
+      course,
+   };
+};
 
-const add1: Add1 = (num1, num2) => num1 + num2;
-
-interface Add2 {
-   (num1: number, num2: number): number;
-}
-
-const add2: Add2 = (num1, num2) => num1 + num2;
+const student1 = addCourseToStudent<{ name: string; email: string }>({
+   name: "Tushar",
+   email: "tushar@gmail.com",
+});
