@@ -1,17 +1,28 @@
-// https://jsonplaceholder.typicode.com/todos/1
+// const arrOfNumbers: number[] = [1, 3, 5];
 
-type TodoData = {
-   userId: number;
-   id: number;
-   title: string;
-   completed: boolean;
+// const arrOfStrings: string[] = arrOfNumbers.map((element: number): string =>
+//    element.toString()
+// );
+
+// console.log(arrOfStrings); // [ '1', '3', '5' ]
+
+type AreaNumber = {
+   height: number;
+   width: number;
 };
 
-const getData = async (): Promise<TodoData> => {
-   const response = await fetch("https://jsonplaceholder.typicode.com/todos/1");
-   const data = await response.json();
-   console.log(data);
-   return data;
+type Height = AreaNumber["height"];
+
+// type AreaString = {
+//    height: string;
+//    width: string;
+// };
+
+type AreaString<T> = {
+   [index in keyof T]: T[index];
 };
 
-getData();
+const area1: AreaString<{ height: number; width: string }> = {
+   height: 100,
+   width: "50",
+};
