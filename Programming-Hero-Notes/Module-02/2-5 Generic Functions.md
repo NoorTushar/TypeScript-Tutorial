@@ -6,7 +6,7 @@ const createArray = (param: string): string[] => [param];
 console.log(createArray("Tushar"));
 ```
 
-ai function e amra ki kortesi? akta value pass kortesi jeita akta array hoitese.
+ai function e amra ki kortesi? akta string value pass kortesi jeita akta array hoitese.
 
 So amra bar bar string e ki pathabo? onno kichu pathaileo to jatey oi type er array create hoy shei khetre amra generic korte pari.
 
@@ -95,5 +95,10 @@ const addCourseToStudent = <T>(param: T) => {
 const student1 = addCourseToStudent<{ name: string; email: string }>({
    name: "Tushar",
    email: "tushar@gmail.com",
+});
+
+const student2 = addCourseToStudent<{ id: number; hasLaptop: boolean }>({
+   id: 1516,
+   hasLaptop: true,
 });
 ```

@@ -1,13 +1,17 @@
-const addCourseToStudent = <T>(param: T) => {
-   const course = "Next Level Web Development";
+// https://jsonplaceholder.typicode.com/todos/1
 
-   return {
-      ...param,
-      course,
-   };
+type TodoData = {
+   userId: number;
+   id: number;
+   title: string;
+   completed: boolean;
 };
 
-const student1 = addCourseToStudent<{ name: string; email: string }>({
-   name: "Tushar",
-   email: "tushar@gmail.com",
-});
+const getData = async (): Promise<TodoData> => {
+   const response = await fetch("https://jsonplaceholder.typicode.com/todos/1");
+   const data = await response.json();
+   console.log(data);
+   return data;
+};
+
+getData();
