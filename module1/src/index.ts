@@ -1,44 +1,28 @@
-class Parent {
+type NormalUser = {
    name: string;
-   age: number;
-   address: string;
+};
 
-   constructor(name: string, age: number, address: string) {
-      this.name = name;
-      this.age = age;
-      this.address = address;
+type AdminUser = {
+   name: string;
+   role: "admin";
+};
+
+const getUser = (user: NormalUser | AdminUser): string => {
+   if ("role" in user) {
+      return `Hi! My name is ${user.name} and I am an ${user.role}`;
+   } else {
+      return `Hi! My name is ${user.name}.`;
    }
+};
 
-   getSleep(hours: number) {
-      console.log(`The student ${this.name} gets ${hours} of sleep`);
-   }
-}
+const user1: NormalUser = {
+   name: "Tushar",
+};
 
-class Student extends Parent {
-   constructor(name: string, age: number, address: string) {
-      super(name, age, address);
-   }
-}
+const user2: AdminUser = {
+   name: "Persian",
+   role: "admin",
+};
 
-class Teacher extends Parent {
-   designation: string;
-
-   constructor(
-      name: string,
-      age: number,
-      address: string,
-      designation: string
-   ) {
-      super(name, age, address);
-      this.designation = designation;
-   }
-
-   takeClass(noOfClass: number) {
-      console.log(`${this.name} will take ${noOfClass} of classes`);
-   }
-}
-
-const student1 = new Student("Tushar", 16, "Dhaka");
-student1.getSleep(7); // The student Tushar gets 7 of sleep
-const teacher1 = new Teacher("Mr.X", 40, "Mirpur", "Professor");
-teacher1.takeClass(10); // Mr.X will take 10 of classes
+console.log(getUser(user1)); // Hi! My name is Tushar.
+console.log(getUser(user2)); // Hi! My name is Persian and I am an admin
