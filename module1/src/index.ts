@@ -1,28 +1,30 @@
-type NormalUser = {
+class BankAccount {
+   readonly id: number;
    name: string;
-};
+   protected _balance: number;
 
-type AdminUser = {
-   name: string;
-   role: "admin";
-};
-
-const getUser = (user: NormalUser | AdminUser): string => {
-   if ("role" in user) {
-      return `Hi! My name is ${user.name} and I am an ${user.role}`;
-   } else {
-      return `Hi! My name is ${user.name}.`;
+   constructor(id: number, name: string, balance: number) {
+      this.id = id;
+      this.name = name;
+      this._balance = balance;
    }
-};
 
-const user1: NormalUser = {
-   name: "Tushar",
-};
+   addBalance(amount: number) {
+      this._balance += amount;
+   }
 
-const user2: AdminUser = {
-   name: "Persian",
-   role: "admin",
-};
+   getBalance() {
+      return this._balance;
+   }
+}
 
-console.log(getUser(user1)); // Hi! My name is Tushar.
-console.log(getUser(user2)); // Hi! My name is Persian and I am an admin
+class StudentAccount extends BankAccount {
+   test() {
+      this._balance;
+   }
+}
+
+const goribManusherAccount = new BankAccount(111, "Gorib Bhai", 20);
+
+goribManusherAccount.addBalance(100);
+console.log(goribManusherAccount.getBalance()); // 120
