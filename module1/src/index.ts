@@ -1,24 +1,17 @@
-class BankAccount {
-   readonly id: number;
-   name: string;
-   protected _balance: number;
+class Counter {
+   public static counter: number = 0;
 
-   constructor(id: number, name: string, balance: number) {
-      this.id = id;
-      this.name = name;
-      this._balance = balance;
+   static increment() {
+      return (Counter.counter = Counter.counter + 1);
    }
 
-   set deposit(amount: number) {
-      this._balance += amount;
-   }
-
-   get balance() {
-      return this._balance;
+   static decrement() {
+      return (Counter.counter = Counter.counter - 1);
    }
 }
 
-const goribManusherAccount = new BankAccount(111, "Gorib Bhai", 20);
+// const instance1 = new Counter();
+// const instance2 = new Counter();
 
-goribManusherAccount.deposit = 100;
-console.log(goribManusherAccount.balance); // 120
+console.log(Counter.increment()); // 1
+console.log(Counter.increment()); // 2
