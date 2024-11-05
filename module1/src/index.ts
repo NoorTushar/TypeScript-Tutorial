@@ -1,39 +1,17 @@
 {
-   type Employee = {
-      id: number;
+   type Dev1 = {
       name: string;
-      position: string;
-      address: {
-         city: string;
-         state: string;
-         zip: string;
-         house: {
-            building: string;
-            flatNo: string;
-         };
-      };
+      devType1: "frontend";
    };
 
-   const employee: Employee = {
-      id: 101,
-      name: "Bob",
-      position: "Developer",
-      address: {
-         city: "San Francisco",
-         state: "CA",
-         zip: "94103",
-         house: {
-            building: "Eastern Tower",
-            flatNo: "25N",
-         },
-      },
+   type Dev2 = {
+      name: string;
+      devType2: "backend";
    };
 
-   const {
-      address: {
-         house: { building },
-      },
-   } = employee;
-
-   console.log(building);
+   const proDeveloper: Dev1 & Dev2 = {
+      name: "tushar",
+      devType1: "frontend",
+      devType2: "backend",
+   };
 }

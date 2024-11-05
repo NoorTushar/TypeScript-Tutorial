@@ -1,4 +1,4 @@
-# 💎 Module 1
+# 💎 Module 1 ✅
 
 -  🟨 install ✅
 -  🟨 configure ✅
@@ -40,15 +40,25 @@
    console.log(building);
    ```
 
--  🟨 type alias
+-  🟨 type alias ✅
 
    highlighted for me:
 
    -  Function Type Alias
 
--  🟨 union and intersection
--  🟨 ternary, optional chaining and nullish
--  🟨 never, unknown, nullable type
+-  🟨 union and intersection ✅
+
+   highlighted for me:
+
+   -  Intersection, merge kora type gulake. Jodi common property name thake, oigula aktai ashbe and baki gula merge hobe.
+
+-  🟨 ternary, optional chaining and nullish ✅
+
+   highlighted for me:
+
+   -  Optional Chaining + Nullish Combo
+
+-  🟨 never, unknown, nullable type ✅
 
 # 💎 Module 2
 
