@@ -9,12 +9,12 @@ using the `interface` keyword
 Example,
 
 ```ts
-interface User1 {
+interface IUser1 {
    name: string;
    age: number;
 }
 
-const user1: User1 = {
+const user1: IUser1 = {
    name: "Tushar",
    age: 20,
 };
@@ -55,16 +55,16 @@ Akhon dekhbo intersection diye kibhabe korbo.
 ![alt text](image-4.png)
 
 ```ts
-interface User2 {
+interface IUser2 {
    name: string;
    age: number;
 }
 
-interface UserWithRole2 extends User1 {
+interface IUserWithRole2 extends IUser2 {
    role: string;
 }
 
-const user1: UserWithRole2 = {
+const user1: IUserWithRole2 = {
    name: "Tushar",
    age: 16,
    role: "admin",
@@ -92,7 +92,7 @@ const rollNumbers1: Roll1 = [1, 2, 3];
 
 // so aitao kintu akta object, jeikhane [index] hoilo akta number and tar value o akta number
 
-interface Roll2 {
+interface IRoll2 {
    [index: number]: number;
 }
 
@@ -114,7 +114,7 @@ const add1: Add1 = (num1, num2) => num1 + num2;
 Interface use korle:
 
 ```ts
-interface Add2 {
+interface IAdd2 {
    (num1: number, num2: number): number;
 }
 
@@ -125,3 +125,24 @@ const add2: Add2 = (num1, num2) => num1 + num2;
 
 Array and Function er belae - Type Alias
 Object er khetre - Jekono akta korlei hoy
+
+### More advantage of Interface:
+
+1. Can Merge with same interface name
+
+```ts
+interface IUser {
+   name: string;
+   age: number;
+}
+
+interface IUser {
+   email: string;
+}
+
+const user: IUser = {
+   name: "Tushar",
+   age: 16,
+   email: "t@gmail.com",
+};
+```
