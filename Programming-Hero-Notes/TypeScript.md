@@ -1,15 +1,54 @@
 # 💎 Module 1
 
--  install
--  configure
--  basic data type
--  functions
--  spread and rest
--  destructure
--  type alias
--  union and intersection
--  ternary, optional chaining and nullish
--  never, unknown, nullable type
+-  🟨 install ✅
+-  🟨 configure ✅
+-  🟨 basic data type ✅
+
+   highlighted for me:
+
+   -  tuple
+   -  readonly boshano property name er agey
+
+-  🟨 functions ✅
+
+   highlighted for me:
+
+   -  parameter keo optional kora jae
+   -  default parameter value set korte pari
+   -  map method
+
+-  🟨 spread and rest ✅
+
+   highlighted for me:
+
+   -  REST operator (array create kore individual elements diye)
+
+-  🟨 destructure ✅
+
+   highlighted for me:
+
+   -  nested object destructure syntax:
+      employee er bhitore address ase, abar address er bhitore house ase.
+
+   ```ts
+   const {
+      address: {
+         house: { building },
+      },
+   } = employee;
+
+   console.log(building);
+   ```
+
+-  🟨 type alias
+
+   highlighted for me:
+
+   -  Function Type Alias
+
+-  🟨 union and intersection
+-  🟨 ternary, optional chaining and nullish
+-  🟨 never, unknown, nullable type
 
 # 💎 Module 2
 
