@@ -62,17 +62,48 @@
 
 # 💎 Module 2
 
--  Utility types
--  Interface, type vs interface
--  Introduction to generics
--  Generic with Interface
--  Generic Functions
--  Constraints
--  Constraint using key of
--  Asynchronous typescript
--  Conditional types
--  Mapped types
--  Type assertion Or type narrowing
+-  🟨 Type assertion Or type narrowing
+
+   highlighted for me:
+
+   -  syntax: `as`
+
+   ```ts
+   const result = kgToGm("900") as string;
+   ```
+
+   -  error message in try catch block
+
+   ```ts
+   type CustomError = {
+      message: string;
+   };
+
+   try {
+   } catch (error) {
+      console.log((error as CustomError).message);
+   }
+   ```
+
+-  🟨 Interface, type vs interface
+
+   highlighted for me:
+
+   -  interface diye intersect korte gele we use `extend` keyword
+   -  array interface kora
+   -  function interface kora
+
+   -  advantage: can merge properties with same interface type name
+
+-  🟨 Introduction to generics
+-  🟨 Utility types
+-  🟨 Generic with Interface
+-  🟨 Generic Functions
+-  🟨 Constraints
+-  🟨 Constraint using key of
+-  🟨 Asynchronous typescript
+-  🟨 Conditional types
+-  🟨 Mapped types
 
 # 💎 Module 3
 
@@ -86,3 +117,7 @@
 -  Polymorphism
 -  Abstraction in OOP
 -  Encapsulation in OOP
+
+```
+
+```
