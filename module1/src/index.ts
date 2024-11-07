@@ -1,14 +1,24 @@
-/*
-Problem 8:
-Create a function validateKeys(obj: T, keys: (keyof T)[]) that takes an object obj and an array of keys keys. The function should return true if all of the specified keys exist in the object; otherwise, it should return false.
+type Student = {
+   id: number;
+   name: string;
+   email: string;
+   course: string;
+};
 
-Sample Input:
-const person = { name: "Alice", age: 25, email: "alice@example.com" };
-console.log(validateKeys(person, ["name", "age"]));
+type Phone = {
+   //    id: number;
+   //    name: string;
+   //    email: string;
+   //    course: string;
+   phone: string;
+};
 
-Sample Output:
-true;
-*/
+type CompleteStudent = Student & Phone;
 
-{
-}
+const student1: CompleteStudent = {
+   id: 2,
+   name: "Tushar",
+   email: "tushar@gmail.com",
+   course: "PH",
+   phone: "81515926",
+};
