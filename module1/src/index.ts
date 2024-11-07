@@ -1,14 +1,14 @@
 /*
-Create a TypeScript function called countWordOccurrences that accepts a sentence (string) and a word (string). The function should return the number of times the word appears in the sentence, ignoring case. Use the simple sentence without punctuation as input.
+Problem 8:
+Create a function validateKeys(obj: T, keys: (keyof T)[]) that takes an object obj and an array of keys keys. The function should return true if all of the specified keys exist in the object; otherwise, it should return false.
 
-Example:
-
-Input: "I love typescript", "typescript"
-Output: 1
 Sample Input:
-countWordOccurrences("I love typescript", "typescript");
+const person = { name: "Alice", age: 25, email: "alice@example.com" };
+console.log(validateKeys(person, ["name", "age"]));
 
 Sample Output:
-1;
-
+true;
 */
+
+{
+}
