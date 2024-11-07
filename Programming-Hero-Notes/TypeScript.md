@@ -62,7 +62,7 @@
 
 # 💎 Module 2
 
--  🟨 Type assertion Or type narrowing
+-  🟨 Type assertion Or type narrowing ✅
 
    highlighted for me:
 
@@ -85,22 +85,27 @@
    }
    ```
 
--  🟨 Interface, type vs interface
+-  🟨 Interface, type vs interface ✅
 
    highlighted for me:
 
-   -  interface diye intersect korte gele we use `extend` keyword
+   -  interface diye intersect korte gele we use `extends` keyword
    -  array interface kora
    -  function interface kora
 
    -  advantage: can merge properties with same interface type name
 
--  🟨 Introduction to generics
--  🟨 Utility types
--  🟨 Generic with Interface
--  🟨 Generic Functions
+-  🟨 Introduction to generics ✅
+-  🟨 Generic with Interface ✅
+-  🟨 Generic Functions ✅
 -  🟨 Constraints
+
+   highlighted for me:
+
+   -  Constraints korar way hocchey to use `extends` keyword
+
 -  🟨 Constraint using key of
+-  🟨 Utility types
 -  🟨 Asynchronous typescript
 -  🟨 Conditional types
 -  🟨 Mapped types
