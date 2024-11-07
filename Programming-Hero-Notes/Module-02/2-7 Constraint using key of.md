@@ -68,4 +68,14 @@ const getValue = <T>(obj: T, key: keyof T) => {
 };
 
 getValue({ id: 1, mail: "something" }, "mail");
+
+// BUT aita full constrains hoynai, full constraint korar jonne `extends` use korte hobe:
+
+// modified Example 2:
+
+const getValueModified = <T, K extends keyof T>(obj: T, key: K): T[K] => {
+   return obj[key];
+};
+
+getValueModified({ id: 1, mail: "something" }, "mail");
 ```

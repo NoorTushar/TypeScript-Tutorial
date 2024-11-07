@@ -1,21 +1,14 @@
-// Example 1: just bujhar jonne key of diye ki create hoy
+/*
+Create a TypeScript function called countWordOccurrences that accepts a sentence (string) and a word (string). The function should return the number of times the word appears in the sentence, ignoring case. Use the simple sentence without punctuation as input.
 
-interface IPerson {
-   name: string;
-   age: number;
-}
+Example:
 
-type TPersonKeys = keyof IPerson;
-// TPersonKeys mane "age" | "name" type
+Input: "I love typescript", "typescript"
+Output: 1
+Sample Input:
+countWordOccurrences("I love typescript", "typescript");
 
-const test: TPersonKeys = "age";
-const test2: TPersonKeys = "name";
+Sample Output:
+1;
 
-// Example 2: key of ke kibhabe kaaj e lagaite pari
-// akta object dilam, and tar against e jate bhul key na dei, shei khetre use korte pari
-
-const getValue = <T>(obj: T, key: keyof T) => {
-   console.log(obj[key]);
-};
-
-getValue({ id: 1, mail: "something" }, "mail");
+*/

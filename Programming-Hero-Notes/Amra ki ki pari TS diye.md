@@ -58,3 +58,6 @@ const resultGenObj = createArrayWithGeneric<{ name: string; age: number }>({
 ## 10. `Keyof` operator for generic constraints
 
 amra akta type er key gula nite pari. niye union create korte pari
+
+##
+ 
