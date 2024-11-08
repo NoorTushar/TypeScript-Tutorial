@@ -1,24 +1,23 @@
-type Student = {
-   id: number;
-   name: string;
-   email: string;
-   course: string;
+type Circle = {
+   shape: "circle";
+   radius: number;
 };
 
-type Phone = {
-   //    id: number;
-   //    name: string;
-   //    email: string;
-   //    course: string;
-   phone: string;
+type Rectangle = {
+   shape: "rectangle";
+   width: number;
+   height: number;
 };
 
-type CompleteStudent = Student & Phone;
+type TShapeArea = Circle | Rectangle;
 
-const student1: CompleteStudent = {
-   id: 2,
-   name: "Tushar",
-   email: "tushar@gmail.com",
-   course: "PH",
-   phone: "81515926",
+const calculateShapeArea = (shape: TShapeArea) => {
+   if (shape.shape === "circle") {
+      return parseFloat((Math.PI * shape.radius * shape.radius).toFixed(2));
+   } else if (shape.shape === "rectangle") {
+      return shape.height * shape.width;
+   }
 };
+
+const circleArea = calculateShapeArea({ shape: "circle", radius: 5 });
+console.log(circleArea); // Output: 78.54
